@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBS Share Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>DBS Share Prediction</h2>
+
+        <form action="/dbs_prediction" method="post">
+            <label for="rate">Please enter SGD to 1 USD rate:</label>
+            <input type="number" id="rate" name="q" step="0.01" required>
+            <input type="submit" value="Predict">
+        </form>
+
+        <form action="/main" method="post">
+            <input type="submit" value="Back to Main">
+        </form>
+    </div>
+</body>
+</html>
